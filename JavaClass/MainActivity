@@ -1,0 +1,53 @@
+package com.example.androidactivitylifecycle;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Toast.makeText(MainActivity.this,"OnCreate is Called",Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onStart() {
+        Toast.makeText(MainActivity.this,"OnStart is Called",Toast.LENGTH_SHORT).show();
+
+        super.onStart();
+    }
+
+    @Override
+    public void onResume() {
+        Toast.makeText(MainActivity.this,"OnResume is Called",Toast.LENGTH_SHORT).show();
+        super.onResume();
+    }
+
+    @Override
+    public void onPause() {
+        Toast.makeText(MainActivity.this,"OnPause is Called",Toast.LENGTH_SHORT).show();
+        super.onPause();
+    }
+
+    @Override
+    public void onStop() {
+        Toast.makeText(MainActivity.this,"OnStop is Called",Toast.LENGTH_SHORT).show();
+        super.onStop();
+    }
+
+    @Override
+    public void onRestart() {
+        Toast.makeText(MainActivity.this,"OnRestart is Called",Toast.LENGTH_SHORT).show();
+        super.onRestart();
+    }
+
+    @Override
+    public void onDestroy() {
+        Toast.makeText(MainActivity.this,"OnDestroy is Called",Toast.LENGTH_SHORT).show();
+        super.onDestroy();
+    }
+}
